@@ -165,7 +165,7 @@ public class CourseDao {
         Course course = new Course(123, "CS2222");   // update course
         Integer status = dao.updateCourse(123, course);
 
-        List<Course> courses = dao.findAllCourses();
+        courses = dao.findAllCourses();
         for(Course c:courses) {
             System.out.println(c);
         }
@@ -174,7 +174,7 @@ public class CourseDao {
         System.out.println(course);
 
         course = new Course(345, "CS1234");   // create course
-        Integer status = dao.createCourse(course);
+        status = dao.createCourse(course);
         System.out.println(status);
 
         course = dao.findCourseById(345);
